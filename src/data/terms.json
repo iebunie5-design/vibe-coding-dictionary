@@ -1,0 +1,1644 @@
+{
+  "metadata": {
+    "title": "바이브코딩 백과사전",
+    "description": "비전공자 바이브코더를 위한 개발 용어집",
+    "version": "1.0",
+    "total_terms": 150,
+    "last_updated": "2025-02-04",
+    "categories": [
+      { "id": "dev-tools", "name": "개발 도구 & 버전 관리", "count": 20 },
+      { "id": "frontend", "name": "프론트엔드 & UI/UX", "count": 20 },
+      { "id": "programming", "name": "프로그래밍 언어 & 프레임워크", "count": 27 },
+      { "id": "network", "name": "네트워크 & 인프라", "count": 17 },
+      { "id": "database", "name": "데이터베이스", "count": 15 },
+      { "id": "linux-server", "name": "리눅스 & 서버", "count": 12 },
+      { "id": "web-server", "name": "웹 서버", "count": 10 },
+      { "id": "security", "name": "보안 & 인증", "count": 8 },
+      { "id": "performance", "name": "성능 & 최적화", "count": 7 },
+      { "id": "aws", "name": "AWS", "count": 6 },
+      { "id": "media", "name": "미디어 & 특수 기술", "count": 5 },
+      { "id": "platform", "name": "플랫폼 & 통합", "count": 5 }
+    ]
+  },
+  "terms": [
+    {
+      "id": "git",
+      "term": "Git",
+      "category": "개발 도구 & 버전 관리",
+      "definition": "Git은 소프트웨어 개발 프로젝트의 소스 코드 변경 사항을 효율적으로 추적하고 관리하는 데 사용되는 분산 버전 관리 시스템(DVCS)입니다. 개발자들이 코드 변경 이력을 기록하고, 여러 명이 동시에 협업하며 작업을 병합할 수 있도록 돕습니다.",
+      "usage": "Git은 주로 소프트웨어 개발 팀에서 여러 개발자가 하나의 프로젝트 코드를 공유하고 수정할 때 사용됩니다. 각 개발자는 프로젝트의 전체 이력을 로컬에 가질 수 있으며, 새로운 기능 개발이나 버그 수정을 위해 '브랜치'를 생성하여 독립적으로 작업한 후, 완료되면 '메인' 브랜치와 병합합니다.",
+      "references": [
+        { "title": "Git 공식 웹사이트", "url": "https://git-scm.com" },
+        { "title": "Pro Git 책 (온라인 버전)", "url": "https://git-scm.com/book/ko/v2" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "github",
+      "term": "GitHub",
+      "category": "개발 도구 & 버전 관리",
+      "definition": "GitHub는 Git 버전 관리 시스템을 기반으로 하는 웹 호스팅 서비스입니다. 개발자들이 소스 코드를 저장하고 관리하며, 전 세계 어디서든 협업하여 프로젝트를 진행할 수 있도록 다양한 기능을 제공하는 플랫폼입니다.",
+      "usage": "개인 프로젝트의 코드를 백업하고 관리하거나, 팀 프로젝트에서 여러 개발자가 함께 코드를 작성할 때 사용합니다. 오픈소스 프로젝트에 참여하거나, 자신의 포트폴리오를 공개하는 용도로도 활용됩니다.",
+      "references": [
+        { "title": "GitHub 공식 사이트", "url": "https://github.com" },
+        { "title": "GitHub Docs", "url": "https://docs.github.com/ko" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "commit",
+      "term": "커밋 (Commit)",
+      "category": "개발 도구 & 버전 관리",
+      "definition": "커밋은 Git에서 코드 변경 사항을 저장소에 기록하는 행위입니다. 마치 게임에서 '저장'을 누르는 것처럼, 현재 상태를 스냅샷으로 찍어 보관합니다. 각 커밋에는 고유한 ID, 작성자 정보, 날짜, 그리고 변경 내용을 설명하는 메시지가 포함됩니다.",
+      "usage": "코드를 수정한 후 의미 있는 단위로 변경 사항을 기록할 때 사용합니다. 예를 들어 '로그인 기능 추가', '버그 수정' 등의 메시지와 함께 커밋합니다.",
+      "references": [
+        { "title": "Git 커밋 가이드", "url": "https://git-scm.com/book/ko/v2/Git의-기초-수정하고-저장소에-저장하기" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "push",
+      "term": "푸시 (Push)",
+      "category": "개발 도구 & 버전 관리",
+      "definition": "푸시는 로컬 저장소(내 컴퓨터)에 있는 커밋들을 원격 저장소(GitHub 등)로 업로드하는 것입니다. 내 컴퓨터에서 작업한 내용을 클라우드에 백업하고, 다른 팀원들과 공유할 수 있게 만드는 과정입니다.",
+      "usage": "로컬에서 코드 작업을 완료하고 커밋한 후, 이를 GitHub 같은 원격 저장소에 반영할 때 사용합니다.",
+      "references": [
+        { "title": "Git Push 명령어", "url": "https://git-scm.com/docs/git-push" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "pull",
+      "term": "풀 (Pull)",
+      "category": "개발 도구 & 버전 관리",
+      "definition": "풀은 원격 저장소(GitHub 등)에 있는 최신 변경 사항을 로컬 저장소(내 컴퓨터)로 가져와서 병합하는 것입니다. 다른 팀원이 푸시한 코드를 내 컴퓨터로 다운로드받아 동기화하는 과정입니다.",
+      "usage": "팀 프로젝트에서 작업을 시작하기 전에 다른 팀원들이 변경한 최신 코드를 가져올 때 사용합니다.",
+      "references": [
+        { "title": "Git Pull 명령어", "url": "https://git-scm.com/docs/git-pull" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "branch",
+      "term": "브랜치 (Branch)",
+      "category": "개발 도구 & 버전 관리",
+      "definition": "브랜치는 독립적인 작업 공간을 만드는 Git의 기능입니다. 마치 나무에서 가지가 뻗어나가듯이, 메인 코드에서 분기하여 별도의 작업을 진행할 수 있습니다.",
+      "usage": "새로운 기능을 개발하거나 버그를 수정할 때, 메인 브랜치에서 새 브랜치를 만들어 작업합니다. 작업이 완료되면 메인 브랜치에 병합(merge)합니다.",
+      "references": [
+        { "title": "Git 브랜치 가이드", "url": "https://git-scm.com/book/ko/v2/Git-브랜치-브랜치란-무엇인가" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "merge",
+      "term": "머지 (Merge)",
+      "category": "개발 도구 & 버전 관리",
+      "definition": "머지는 두 개의 브랜치를 하나로 합치는 것입니다. 분기되어 각각 발전한 코드를 다시 하나로 통합하는 과정입니다.",
+      "usage": "기능 개발이 완료된 브랜치를 메인 브랜치에 합칠 때 사용합니다. GitHub에서는 Pull Request를 통해 코드 리뷰 후 머지하는 것이 일반적입니다.",
+      "references": [
+        { "title": "Git Merge 가이드", "url": "https://git-scm.com/book/ko/v2/Git-브랜치-브랜치와-Merge-의-기초" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "clone",
+      "term": "클론 (Clone)",
+      "category": "개발 도구 & 버전 관리",
+      "definition": "클론은 원격 저장소의 전체 내용을 로컬 컴퓨터로 복사하는 것입니다. 저장소의 모든 파일, 커밋 이력, 브랜치 정보가 함께 복사됩니다.",
+      "usage": "새 프로젝트에 참여할 때 GitHub의 저장소 URL을 이용해 클론합니다. git clone [URL] 명령어로 실행합니다.",
+      "references": [
+        { "title": "Git Clone 명령어", "url": "https://git-scm.com/docs/git-clone" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "repository",
+      "term": "리포지토리 (Repository)",
+      "category": "개발 도구 & 버전 관리",
+      "definition": "리포지토리(저장소)는 프로젝트의 파일들과 각 파일의 변경 이력을 저장하는 공간입니다. 줄여서 '레포'라고도 부릅니다.",
+      "usage": "새 프로젝트를 시작할 때 리포지토리를 생성합니다. GitHub에서 'New repository' 버튼으로 원격 저장소를 만들거나, git init 명령어로 로컬 저장소를 초기화합니다.",
+      "references": [
+        { "title": "GitHub 리포지토리 만들기", "url": "https://docs.github.com/ko/repositories/creating-and-managing-repositories/creating-a-new-repository" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "pull-request",
+      "term": "풀 리퀘스트 (Pull Request)",
+      "category": "개발 도구 & 버전 관리",
+      "definition": "풀 리퀘스트(PR)는 내가 작업한 브랜치의 변경 사항을 다른 브랜치에 병합해달라고 요청하는 것입니다. GitHub의 핵심 협업 기능으로, 코드 리뷰를 받고 토론한 후 승인되면 머지됩니다.",
+      "usage": "기능 개발이 완료되면 GitHub에서 PR을 생성합니다. 팀원들이 코드를 검토하고 피드백을 주면 수정 후 최종 승인을 받아 머지합니다.",
+      "references": [
+        { "title": "GitHub Pull Request 가이드", "url": "https://docs.github.com/ko/pull-requests" }
+      ],
+      "tags": ["필수", "중급"]
+    },
+    {
+      "id": "fork",
+      "term": "포크 (Fork)",
+      "category": "개발 도구 & 버전 관리",
+      "definition": "포크는 다른 사람의 GitHub 리포지토리를 내 계정으로 복사하는 것입니다. 원본 저장소와 연결은 유지하면서 독립적인 복사본을 만듭니다.",
+      "usage": "오픈소스 프로젝트에 기여하고 싶을 때, 먼저 해당 저장소를 포크합니다. 내 포크에서 수정 작업을 한 후, 원본 저장소에 PR을 보내 기여합니다.",
+      "references": [
+        { "title": "GitHub Fork 가이드", "url": "https://docs.github.com/ko/get-started/quickstart/fork-a-repo" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "gitignore",
+      "term": ".gitignore",
+      "category": "개발 도구 & 버전 관리",
+      "definition": ".gitignore는 Git이 추적하지 않을 파일이나 폴더를 지정하는 설정 파일입니다. 비밀번호, API 키 같은 민감한 정보나, node_modules 같은 자동 생성 파일을 버전 관리에서 제외할 때 사용합니다.",
+      "usage": "프로젝트 루트에 .gitignore 파일을 만들고, 제외할 파일 패턴을 한 줄씩 작성합니다. 예: node_modules/, .env, *.log 등",
+      "references": [
+        { "title": "gitignore 문서", "url": "https://git-scm.com/docs/gitignore" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "ide",
+      "term": "IDE (통합 개발 환경)",
+      "category": "개발 도구 & 버전 관리",
+      "definition": "IDE(Integrated Development Environment)는 코드 작성, 디버깅, 컴파일, 실행을 한 곳에서 할 수 있는 소프트웨어입니다. 대표적으로 VS Code, IntelliJ, PyCharm 등이 있습니다.",
+      "usage": "프로그래밍을 시작할 때 먼저 IDE를 설치합니다. 바이브코딩에서는 AI 기능이 내장된 Cursor IDE가 인기입니다.",
+      "references": [
+        { "title": "VS Code 공식 사이트", "url": "https://code.visualstudio.com" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "vscode",
+      "term": "VS Code",
+      "category": "개발 도구 & 버전 관리",
+      "definition": "VS Code(Visual Studio Code)는 Microsoft에서 만든 무료 코드 편집기입니다. 가볍고 빠르면서도 다양한 확장 프로그램을 통해 강력한 IDE로 확장할 수 있습니다.",
+      "usage": "거의 모든 프로그래밍 언어의 개발에 사용됩니다. GitHub Copilot, Live Server 등의 확장 프로그램을 설치하여 기능을 추가할 수 있습니다.",
+      "references": [
+        { "title": "VS Code 공식 사이트", "url": "https://code.visualstudio.com" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "cursor",
+      "term": "Cursor",
+      "category": "개발 도구 & 버전 관리",
+      "definition": "Cursor는 AI 기능이 내장된 코드 편집기입니다. VS Code를 기반으로 만들어졌으며, GPT-4 등의 AI 모델을 활용하여 코드 자동 생성, 수정, 설명 기능을 제공합니다. 바이브코딩에 최적화된 도구입니다.",
+      "usage": "바이브코더들이 AI와 대화하며 코드를 작성할 때 주로 사용합니다. Cmd+K(Mac) 또는 Ctrl+K(Windows)로 AI에게 명령을 내립니다.",
+      "references": [
+        { "title": "Cursor 공식 사이트", "url": "https://cursor.sh" }
+      ],
+      "tags": ["필수", "바이브코딩"]
+    },
+    {
+      "id": "terminal",
+      "term": "터미널 (Terminal)",
+      "category": "개발 도구 & 버전 관리",
+      "definition": "터미널은 텍스트 명령어로 컴퓨터를 조작하는 인터페이스입니다. CLI(Command Line Interface)라고도 합니다.",
+      "usage": "Git 명령어 실행, npm 패키지 설치, 서버 실행 등에 사용됩니다. Mac에서는 Terminal 앱, Windows에서는 PowerShell을 사용합니다.",
+      "references": [
+        { "title": "터미널 기초 가이드", "url": "https://www.44bits.io/ko/post/linux-and-mac-terminal-guide-for-beginners" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "npm",
+      "term": "npm",
+      "category": "개발 도구 & 버전 관리",
+      "definition": "npm(Node Package Manager)은 JavaScript 패키지 관리자입니다. 전 세계 개발자들이 만든 수백만 개의 코드 패키지를 쉽게 설치하고 관리할 수 있습니다.",
+      "usage": "프로젝트에 필요한 라이브러리를 설치할 때 사용합니다. npm install [패키지명]으로 설치하고, package.json 파일에 의존성 목록이 기록됩니다.",
+      "references": [
+        { "title": "npm 공식 사이트", "url": "https://www.npmjs.com" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "package-json",
+      "term": "package.json",
+      "category": "개발 도구 & 버전 관리",
+      "definition": "package.json은 Node.js 프로젝트의 설정 파일입니다. 프로젝트 이름, 버전, 설명, 의존성 패키지 목록, 실행 스크립트 등의 정보가 담겨 있습니다.",
+      "usage": "npm init 명령어로 생성하며, 프로젝트 루트에 위치합니다. 다른 개발자가 프로젝트를 클론한 후 npm install만 실행하면 필요한 모든 패키지가 자동으로 설치됩니다.",
+      "references": [
+        { "title": "package.json 가이드", "url": "https://docs.npmjs.com/cli/v10/configuring-npm/package-json" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "stash",
+      "term": "스태시 (Stash)",
+      "category": "개발 도구 & 버전 관리",
+      "definition": "스태시는 작업 중인 변경 사항을 임시로 저장해두는 Git 기능입니다. 커밋하기엔 애매하지만 다른 브랜치로 전환해야 할 때 사용합니다.",
+      "usage": "급하게 다른 브랜치에서 작업해야 할 때, git stash로 현재 변경사항을 저장하고 브랜치를 전환합니다.",
+      "references": [
+        { "title": "Git Stash 가이드", "url": "https://git-scm.com/book/ko/v2/Git-도구-Stashing과-Cleaning" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "rebase",
+      "term": "리베이스 (Rebase)",
+      "category": "개발 도구 & 버전 관리",
+      "definition": "리베이스는 브랜치의 시작점을 다른 커밋으로 옮기는 Git 작업입니다. 머지와 달리 히스토리를 깔끔하게 일직선으로 유지할 수 있습니다.",
+      "usage": "메인 브랜치의 최신 변경사항을 내 작업 브랜치에 반영할 때 사용합니다. git rebase main 명령어로 실행합니다.",
+      "references": [
+        { "title": "Git Rebase 가이드", "url": "https://git-scm.com/book/ko/v2/Git-브랜치-Rebase-하기" }
+      ],
+      "tags": ["고급"]
+    },
+    {
+      "id": "html",
+      "term": "HTML",
+      "category": "프론트엔드 & UI/UX",
+      "definition": "HTML(HyperText Markup Language)은 웹페이지의 구조와 내용을 정의하는 마크업 언어입니다. 집을 지을 때의 뼈대(골조)와 같은 역할을 합니다.",
+      "usage": "모든 웹페이지는 HTML로 시작됩니다. <html>, <head>, <body> 등의 기본 태그로 구조를 잡고, <h1>, <p>, <img>, <a> 등의 태그로 내용을 작성합니다.",
+      "references": [
+        { "title": "MDN HTML 가이드", "url": "https://developer.mozilla.org/ko/docs/Web/HTML" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "css",
+      "term": "CSS",
+      "category": "프론트엔드 & UI/UX",
+      "definition": "CSS(Cascading Style Sheets)는 웹페이지의 시각적 디자인을 담당하는 스타일 언어입니다. HTML이 뼈대라면 CSS는 페인트, 가구, 인테리어에 해당합니다.",
+      "usage": "HTML 요소에 스타일을 적용할 때 사용합니다. 선택자로 요소를 지정하고, 속성과 값으로 스타일을 정의합니다.",
+      "references": [
+        { "title": "MDN CSS 가이드", "url": "https://developer.mozilla.org/ko/docs/Web/CSS" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "javascript",
+      "term": "JavaScript",
+      "category": "프론트엔드 & UI/UX",
+      "definition": "JavaScript는 웹페이지에 동적인 기능을 추가하는 프로그래밍 언어입니다. HTML, CSS가 정적인 구조와 디자인이라면, JavaScript는 사용자와의 상호작용을 담당합니다.",
+      "usage": "웹 프론트엔드 개발의 핵심 언어입니다. 브라우저에서 실행되며, Node.js를 통해 서버에서도 사용됩니다.",
+      "references": [
+        { "title": "MDN JavaScript 가이드", "url": "https://developer.mozilla.org/ko/docs/Web/JavaScript" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "react",
+      "term": "React",
+      "category": "프론트엔드 & UI/UX",
+      "definition": "React는 Facebook(Meta)에서 만든 UI 구축용 JavaScript 라이브러리입니다. 웹페이지를 '컴포넌트'라는 재사용 가능한 조각으로 나누어 개발합니다.",
+      "usage": "복잡한 웹 애플리케이션을 개발할 때 사용합니다. 컴포넌트 기반으로 UI를 구성하고, 상태(state) 관리를 통해 동적인 화면을 구현합니다.",
+      "references": [
+        { "title": "React 공식 문서", "url": "https://react.dev" }
+      ],
+      "tags": ["필수", "중급"]
+    },
+    {
+      "id": "component",
+      "term": "컴포넌트 (Component)",
+      "category": "프론트엔드 & UI/UX",
+      "definition": "컴포넌트는 재사용 가능한 UI 조각입니다. 레고 블록처럼 독립적인 부품으로 만들어서 조합하여 전체 화면을 구성합니다.",
+      "usage": "React, Vue 등의 프레임워크에서 핵심 개념입니다. 한 번 만들어두면 여러 곳에서 재사용할 수 있습니다.",
+      "references": [
+        { "title": "React 컴포넌트 가이드", "url": "https://react.dev/learn/your-first-component" }
+      ],
+      "tags": ["필수", "중급"]
+    },
+    {
+      "id": "dom",
+      "term": "DOM",
+      "category": "프론트엔드 & UI/UX",
+      "definition": "DOM(Document Object Model)은 HTML 문서를 프로그래밍적으로 조작할 수 있게 표현한 구조입니다. 웹페이지를 나무 구조로 만들어 JavaScript가 요소를 찾고, 수정하고, 추가할 수 있게 합니다.",
+      "usage": "JavaScript로 웹페이지를 동적으로 변경할 때 DOM을 조작합니다. document.getElementById(), querySelector() 등으로 요소를 선택합니다.",
+      "references": [
+        { "title": "MDN DOM 가이드", "url": "https://developer.mozilla.org/ko/docs/Web/API/Document_Object_Model" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "responsive",
+      "term": "반응형 웹 (Responsive Web)",
+      "category": "프론트엔드 & UI/UX",
+      "definition": "반응형 웹은 다양한 화면 크기(PC, 태블릿, 모바일)에 맞게 레이아웃이 자동으로 조절되는 웹 디자인 방식입니다.",
+      "usage": "CSS의 미디어 쿼리(@media)를 사용하여 화면 크기별로 다른 스타일을 적용합니다. Tailwind CSS 같은 프레임워크가 반응형 개발을 쉽게 해줍니다.",
+      "references": [
+        { "title": "MDN 반응형 디자인", "url": "https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/Responsive_Design" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "flexbox",
+      "term": "Flexbox",
+      "category": "프론트엔드 & UI/UX",
+      "definition": "Flexbox는 CSS의 레이아웃 모델로, 요소들을 유연하게 정렬하고 배치할 수 있습니다. 복잡한 레이아웃을 간단한 코드로 구현할 수 있습니다.",
+      "usage": "컨테이너에 display: flex를 적용하고, justify-content, align-items 등의 속성으로 자식 요소들을 정렬합니다.",
+      "references": [
+        { "title": "Flexbox 가이드", "url": "https://css-tricks.com/snippets/css/a-guide-to-flexbox/" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "grid",
+      "term": "CSS Grid",
+      "category": "프론트엔드 & UI/UX",
+      "definition": "CSS Grid는 2차원(행과 열) 레이아웃을 구현하는 CSS 기능입니다. Flexbox가 1차원이라면, Grid는 바둑판 같은 복잡한 레이아웃을 만들 수 있습니다.",
+      "usage": "display: grid를 적용하고 grid-template-columns, grid-template-rows로 행/열 구조를 정의합니다.",
+      "references": [
+        { "title": "CSS Grid 가이드", "url": "https://css-tricks.com/snippets/css/complete-guide-grid/" }
+      ],
+      "tags": ["필수", "중급"]
+    },
+    {
+      "id": "tailwind",
+      "term": "Tailwind CSS",
+      "category": "프론트엔드 & UI/UX",
+      "definition": "Tailwind CSS는 유틸리티 클래스 기반의 CSS 프레임워크입니다. 미리 정의된 클래스를 조합하여 빠르게 스타일을 적용할 수 있습니다.",
+      "usage": "class=\"bg-blue-500 text-white p-4 rounded\"처럼 클래스를 조합하여 스타일을 적용합니다. AI와 함께 바이브코딩할 때 특히 효율적입니다.",
+      "references": [
+        { "title": "Tailwind CSS 공식 문서", "url": "https://tailwindcss.com" }
+      ],
+      "tags": ["필수", "바이브코딩"]
+    },
+    {
+      "id": "nextjs",
+      "term": "Next.js",
+      "category": "프론트엔드 & UI/UX",
+      "definition": "Next.js는 React 기반의 풀스택 웹 프레임워크입니다. 서버사이드 렌더링(SSR), 정적 사이트 생성(SSG), API 라우트 등의 기능을 제공합니다.",
+      "usage": "React 프로젝트에서 SEO가 필요하거나 서버 기능이 필요할 때 사용합니다. Vercel을 통해 쉽게 배포할 수 있습니다.",
+      "references": [
+        { "title": "Next.js 공식 문서", "url": "https://nextjs.org/docs" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "vue",
+      "term": "Vue.js",
+      "category": "프론트엔드 & UI/UX",
+      "definition": "Vue.js는 사용하기 쉬운 프론트엔드 JavaScript 프레임워크입니다. React와 비슷한 컴포넌트 기반 개발을 지원하지만, 학습 곡선이 더 완만합니다.",
+      "usage": "웹 애플리케이션의 프론트엔드를 개발할 때 사용합니다. 단일 파일 컴포넌트(.vue)로 HTML, CSS, JavaScript를 한 파일에 작성합니다.",
+      "references": [
+        { "title": "Vue.js 공식 문서", "url": "https://vuejs.org" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "state",
+      "term": "상태 (State)",
+      "category": "프론트엔드 & UI/UX",
+      "definition": "상태는 애플리케이션의 현재 데이터 상황을 말합니다. 로그인 여부, 장바구니 아이템, 입력 폼 값 등 시간에 따라 변할 수 있는 모든 데이터입니다.",
+      "usage": "React에서는 useState 훅으로 상태를 관리합니다. 상태가 복잡해지면 Redux, Zustand 같은 상태 관리 라이브러리를 사용합니다.",
+      "references": [
+        { "title": "React State 가이드", "url": "https://react.dev/learn/state-a-components-memory" }
+      ],
+      "tags": ["필수", "중급"]
+    },
+    {
+      "id": "props",
+      "term": "Props",
+      "category": "프론트엔드 & UI/UX",
+      "definition": "Props(Properties)는 부모 컴포넌트에서 자식 컴포넌트로 데이터를 전달하는 방법입니다. 함수의 매개변수처럼 컴포넌트에 값을 넘겨줍니다.",
+      "usage": "<Button color=\"blue\" text=\"클릭\" />처럼 속성으로 값을 전달합니다. 자식 컴포넌트에서는 props.color로 접근합니다.",
+      "references": [
+        { "title": "React Props 가이드", "url": "https://react.dev/learn/passing-props-to-a-component" }
+      ],
+      "tags": ["필수", "중급"]
+    },
+    {
+      "id": "hook",
+      "term": "훅 (Hook)",
+      "category": "프론트엔드 & UI/UX",
+      "definition": "훅은 React 함수형 컴포넌트에서 상태와 생명주기 기능을 사용하게 해주는 함수입니다. useState, useEffect, useContext 등이 있습니다.",
+      "usage": "함수형 컴포넌트 내부에서 훅을 호출합니다. useState로 상태를 관리하고, useEffect로 부수 효과를 처리합니다.",
+      "references": [
+        { "title": "React Hooks 가이드", "url": "https://react.dev/reference/react" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "spa",
+      "term": "SPA (Single Page Application)",
+      "category": "프론트엔드 & UI/UX",
+      "definition": "SPA는 페이지 전체를 새로고침하지 않고 필요한 부분만 동적으로 갱신하는 웹 애플리케이션입니다. 앱처럼 부드러운 사용자 경험을 제공합니다.",
+      "usage": "React, Vue, Angular 등으로 SPA를 개발합니다. Gmail, 트위터 등이 SPA의 예입니다.",
+      "references": [
+        { "title": "SPA 설명", "url": "https://developer.mozilla.org/ko/docs/Glossary/SPA" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "ui-ux",
+      "term": "UI/UX",
+      "category": "프론트엔드 & UI/UX",
+      "definition": "UI(User Interface)는 사용자가 보고 상호작용하는 화면 요소이고, UX(User Experience)는 서비스를 사용하는 전체적인 경험입니다.",
+      "usage": "Figma로 UI를 디자인하고, 사용자 테스트로 UX를 개선합니다. 개발자도 기본적인 UI/UX 원칙을 이해하면 더 좋은 결과물을 만들 수 있습니다.",
+      "references": [
+        { "title": "UI/UX 디자인 기초", "url": "https://www.interaction-design.org/literature/topics/ux-design" }
+      ],
+      "tags": ["기초"]
+    },
+    {
+      "id": "figma",
+      "term": "Figma",
+      "category": "프론트엔드 & UI/UX",
+      "definition": "Figma는 웹 기반 UI/UX 디자인 도구입니다. 실시간 협업이 가능하고, 프로토타입 제작, 디자인 시스템 관리 등을 지원합니다.",
+      "usage": "화면 설계, 와이어프레임, 목업 제작에 사용합니다. 개발자에게 디자인 스펙을 전달하는 협업 도구로도 활용됩니다.",
+      "references": [
+        { "title": "Figma 공식 사이트", "url": "https://www.figma.com" }
+      ],
+      "tags": ["기초"]
+    },
+    {
+      "id": "v0",
+      "term": "v0.dev",
+      "category": "프론트엔드 & UI/UX",
+      "definition": "v0.dev는 Vercel에서 만든 AI 기반 UI 생성 도구입니다. 자연어로 원하는 UI를 설명하면 React 컴포넌트 코드를 자동으로 생성해줍니다.",
+      "usage": "바이브코딩에서 UI를 빠르게 만들 때 유용합니다. '로그인 폼 만들어줘' 등의 프롬프트로 코드를 생성하고, 복사하여 프로젝트에 적용합니다.",
+      "references": [
+        { "title": "v0.dev", "url": "https://v0.dev" }
+      ],
+      "tags": ["바이브코딩"]
+    },
+    {
+      "id": "variable",
+      "term": "변수 (Variable)",
+      "category": "프로그래밍 언어 & 프레임워크",
+      "definition": "변수는 데이터를 저장하는 이름표가 붙은 상자입니다. 숫자, 문자, 객체 등 다양한 값을 담을 수 있으며, 프로그램 실행 중 값이 변경될 수 있습니다.",
+      "usage": "let name = '홍길동'; const age = 25; 처럼 선언합니다. JavaScript에서 let은 변경 가능, const는 변경 불가능한 변수를 선언합니다.",
+      "references": [
+        { "title": "MDN 변수", "url": "https://developer.mozilla.org/ko/docs/Learn/JavaScript/First_steps/Variables" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "function",
+      "term": "함수 (Function)",
+      "category": "프로그래밍 언어 & 프레임워크",
+      "definition": "함수는 특정 작업을 수행하는 코드 묶음입니다. 레시피처럼 한 번 정의해두면 필요할 때마다 호출하여 재사용할 수 있습니다.",
+      "usage": "function add(a, b) { return a + b; } 처럼 정의하고, add(1, 2)로 호출합니다.",
+      "references": [
+        { "title": "MDN 함수", "url": "https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Functions" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "array",
+      "term": "배열 (Array)",
+      "category": "프로그래밍 언어 & 프레임워크",
+      "definition": "배열은 여러 개의 값을 순서대로 저장하는 데이터 구조입니다. 인덱스는 0부터 시작합니다.",
+      "usage": "const fruits = ['사과', '바나나', '오렌지']; 처럼 선언합니다. fruits[0]은 '사과'입니다.",
+      "references": [
+        { "title": "MDN 배열", "url": "https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "object",
+      "term": "객체 (Object)",
+      "category": "프로그래밍 언어 & 프레임워크",
+      "definition": "객체는 관련된 데이터와 기능을 묶어놓은 구조입니다. 키(key)와 값(value)의 쌍으로 이루어져 있습니다.",
+      "usage": "const person = { name: '홍길동', age: 25 }; 처럼 정의합니다. person.name으로 접근합니다.",
+      "references": [
+        { "title": "MDN 객체", "url": "https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Working_with_Objects" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "condition",
+      "term": "조건문 (Conditional)",
+      "category": "프로그래밍 언어 & 프레임워크",
+      "definition": "조건문은 특정 조건에 따라 다른 코드를 실행하게 하는 구문입니다. if, else if, else가 기본 형태입니다.",
+      "usage": "if (age >= 18) { console.log('성인'); } else { console.log('미성년자'); } 처럼 사용합니다.",
+      "references": [
+        { "title": "MDN 조건문", "url": "https://developer.mozilla.org/ko/docs/Learn/JavaScript/Building_blocks/conditionals" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "loop",
+      "term": "반복문 (Loop)",
+      "category": "프로그래밍 언어 & 프레임워크",
+      "definition": "반복문은 같은 코드를 여러 번 실행하게 하는 구문입니다. for, while, forEach 등이 있습니다.",
+      "usage": "for (let i = 0; i < 5; i++) { console.log(i); } 처럼 사용합니다.",
+      "references": [
+        { "title": "MDN 반복문", "url": "https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Loops_and_iteration" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "class",
+      "term": "클래스 (Class)",
+      "category": "프로그래밍 언어 & 프레임워크",
+      "definition": "클래스는 객체를 만들기 위한 설계도(틀)입니다. 붕어빵 틀처럼 같은 구조의 객체를 여러 개 만들 수 있습니다.",
+      "usage": "class Person { constructor(name) { this.name = name; } } const p = new Person('홍길동'); 처럼 사용합니다.",
+      "references": [
+        { "title": "MDN 클래스", "url": "https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Classes" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "async-await",
+      "term": "async/await",
+      "category": "프로그래밍 언어 & 프레임워크",
+      "definition": "async/await는 비동기 코드를 동기 코드처럼 읽기 쉽게 작성하는 문법입니다. API 호출 같은 시간이 걸리는 작업의 완료를 기다립니다.",
+      "usage": "async function fetchData() { const response = await fetch(url); const data = await response.json(); return data; }",
+      "references": [
+        { "title": "MDN async/await", "url": "https://developer.mozilla.org/ko/docs/Learn/JavaScript/Asynchronous/Promises" }
+      ],
+      "tags": ["필수", "중급"]
+    },
+    {
+      "id": "promise",
+      "term": "Promise",
+      "category": "프로그래밍 언어 & 프레임워크",
+      "definition": "Promise는 비동기 작업의 미래 완료(또는 실패)를 나타내는 객체입니다. 대기, 이행, 거부 세 상태가 있습니다.",
+      "usage": "fetch(url).then(res => res.json()).then(data => console.log(data)).catch(err => console.error(err));",
+      "references": [
+        { "title": "MDN Promise", "url": "https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "callback",
+      "term": "콜백 (Callback)",
+      "category": "프로그래밍 언어 & 프레임워크",
+      "definition": "콜백은 다른 함수의 인자로 전달되어 나중에 실행되는 함수입니다. 비동기 처리의 기본 패턴입니다.",
+      "usage": "setTimeout(() => console.log('3초 후 실행'), 3000); 에서 화살표 함수가 콜백입니다.",
+      "references": [
+        { "title": "MDN 콜백 함수", "url": "https://developer.mozilla.org/ko/docs/Glossary/Callback_function" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "typescript",
+      "term": "TypeScript",
+      "category": "프로그래밍 언어 & 프레임워크",
+      "definition": "TypeScript는 JavaScript에 타입 시스템을 추가한 언어입니다. 변수, 함수의 매개변수와 반환값에 타입을 지정하여 오류를 미리 잡을 수 있습니다.",
+      "usage": "let name: string = '홍길동'; function add(a: number, b: number): number { return a + b; }",
+      "references": [
+        { "title": "TypeScript 공식 문서", "url": "https://www.typescriptlang.org" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "python",
+      "term": "Python",
+      "category": "프로그래밍 언어 & 프레임워크",
+      "definition": "Python은 읽기 쉽고 배우기 쉬운 범용 프로그래밍 언어입니다. 데이터 과학, AI, 웹 개발, 자동화 등 다양한 분야에서 사용됩니다.",
+      "usage": "데이터 분석에는 pandas, 머신러닝에는 scikit-learn, 웹 개발에는 Django, Flask를 사용합니다.",
+      "references": [
+        { "title": "Python 공식 문서", "url": "https://docs.python.org/ko/" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "nodejs",
+      "term": "Node.js",
+      "category": "프로그래밍 언어 & 프레임워크",
+      "definition": "Node.js는 브라우저 밖에서 JavaScript를 실행할 수 있게 해주는 런타임 환경입니다. 서버 개발에 사용됩니다.",
+      "usage": "Express.js로 웹 서버를 만들거나, 빌드 도구를 실행합니다. node app.js로 JavaScript 파일을 실행합니다.",
+      "references": [
+        { "title": "Node.js 공식 문서", "url": "https://nodejs.org/ko/docs/" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "json",
+      "term": "JSON",
+      "category": "프로그래밍 언어 & 프레임워크",
+      "definition": "JSON(JavaScript Object Notation)은 데이터를 저장하고 전송하는 텍스트 형식입니다. API 통신의 표준 데이터 형식입니다.",
+      "usage": "{\"name\": \"홍길동\", \"age\": 25} 형태로 작성합니다. JSON.parse()로 객체로, JSON.stringify()로 문자열로 변환합니다.",
+      "references": [
+        { "title": "MDN JSON", "url": "https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "module",
+      "term": "모듈 (Module)",
+      "category": "프로그래밍 언어 & 프레임워크",
+      "definition": "모듈은 관련된 코드를 하나의 파일로 묶어놓은 것입니다. 코드를 분리하여 관리하고, 필요한 곳에서 불러와(import) 사용합니다.",
+      "usage": "export function add(a, b) { return a + b; } 로 내보내고, import { add } from './math.js'; 로 가져옵니다.",
+      "references": [
+        { "title": "MDN 모듈", "url": "https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Modules" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "framework",
+      "term": "프레임워크 (Framework)",
+      "category": "프로그래밍 언어 & 프레임워크",
+      "definition": "프레임워크는 애플리케이션 개발을 위한 뼈대(구조)를 제공하는 도구입니다. React, Django, Spring 등이 대표적입니다.",
+      "usage": "웹 개발에서 처음부터 모든 것을 만들지 않고 프레임워크를 사용합니다.",
+      "references": [
+        { "title": "프레임워크 vs 라이브러리", "url": "https://www.freecodecamp.org/news/the-difference-between-a-framework-and-a-library-bd133054023f/" }
+      ],
+      "tags": ["기초"]
+    },
+    {
+      "id": "library",
+      "term": "라이브러리 (Library)",
+      "category": "프로그래밍 언어 & 프레임워크",
+      "definition": "라이브러리는 특정 기능을 수행하는 코드 모음입니다. 프레임워크와 달리 필요한 부분만 선택적으로 사용합니다.",
+      "usage": "날짜 처리에 dayjs, HTTP 요청에 axios 같은 라이브러리를 사용합니다. npm install로 설치합니다.",
+      "references": [
+        { "title": "npm 라이브러리 검색", "url": "https://www.npmjs.com" }
+      ],
+      "tags": ["기초"]
+    },
+    {
+      "id": "datatype",
+      "term": "자료형 (Data Type)",
+      "category": "프로그래밍 언어 & 프레임워크",
+      "definition": "자료형은 데이터의 종류를 나타냅니다. 숫자(number), 문자열(string), 불린(boolean), 배열, 객체 등이 있습니다.",
+      "usage": "JavaScript에서 typeof 연산자로 자료형을 확인합니다. typeof 'hello'는 'string'을 반환합니다.",
+      "references": [
+        { "title": "MDN 자료형", "url": "https://developer.mozilla.org/ko/docs/Web/JavaScript/Data_structures" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "string",
+      "term": "문자열 (String)",
+      "category": "프로그래밍 언어 & 프레임워크",
+      "definition": "문자열은 텍스트 데이터를 나타내는 자료형입니다. 따옴표로 감싸서 표현합니다.",
+      "usage": "'Hello', \"World\", `Template ${variable}` 세 가지 방식으로 작성합니다.",
+      "references": [
+        { "title": "MDN 문자열", "url": "https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "boolean",
+      "term": "불린 (Boolean)",
+      "category": "프로그래밍 언어 & 프레임워크",
+      "definition": "불린은 참(true) 또는 거짓(false) 두 가지 값만 가지는 자료형입니다. 조건문, 논리 연산에서 사용됩니다.",
+      "usage": "const isLoggedIn = true; if (isLoggedIn) { ... } 처럼 조건 판단에 사용합니다.",
+      "references": [
+        { "title": "MDN Boolean", "url": "https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "null-undefined",
+      "term": "null과 undefined",
+      "category": "프로그래밍 언어 & 프레임워크",
+      "definition": "null은 '의도적으로 비어있음'을, undefined는 '값이 할당되지 않음'을 나타냅니다.",
+      "usage": "let a; // undefined, let b = null; // 의도적 빈 값",
+      "references": [
+        { "title": "MDN null", "url": "https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/null" }
+      ],
+      "tags": ["기초"]
+    },
+    {
+      "id": "scope",
+      "term": "스코프 (Scope)",
+      "category": "프로그래밍 언어 & 프레임워크",
+      "definition": "스코프는 변수에 접근할 수 있는 범위입니다. 전역 스코프, 지역 스코프, 블록 스코프로 구분됩니다.",
+      "usage": "let, const는 블록 스코프({}), var는 함수 스코프를 가집니다.",
+      "references": [
+        { "title": "MDN 스코프", "url": "https://developer.mozilla.org/ko/docs/Glossary/Scope" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "debugging",
+      "term": "디버깅 (Debugging)",
+      "category": "프로그래밍 언어 & 프레임워크",
+      "definition": "디버깅은 코드의 오류(버그)를 찾아 수정하는 과정입니다. console.log, 브레이크포인트, 디버거 도구를 사용합니다.",
+      "usage": "console.log()로 변수 값을 확인하거나, 브라우저 개발자 도구에서 코드를 단계별로 실행합니다.",
+      "references": [
+        { "title": "Chrome DevTools 디버깅", "url": "https://developer.chrome.com/docs/devtools/javascript/" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "error-handling",
+      "term": "에러 처리 (Error Handling)",
+      "category": "프로그래밍 언어 & 프레임워크",
+      "definition": "에러 처리는 프로그램 실행 중 발생할 수 있는 오류를 예측하고 대응하는 것입니다. try-catch 문으로 에러를 잡습니다.",
+      "usage": "try { 위험한코드(); } catch (error) { console.error(error); }",
+      "references": [
+        { "title": "MDN try...catch", "url": "https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/try...catch" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "api",
+      "term": "API",
+      "category": "네트워크 & 인프라",
+      "definition": "API(Application Programming Interface)는 프로그램들이 서로 통신하는 방법입니다. 식당의 메뉴판처럼, 요청할 수 있는 것들의 목록과 방법을 정의합니다.",
+      "usage": "날씨 앱이 기상청 API를 호출해 데이터를 받아오거나, 로그인 시 서버 API에 사용자 정보를 보내 인증합니다.",
+      "references": [
+        { "title": "MDN API 소개", "url": "https://developer.mozilla.org/ko/docs/Learn/JavaScript/Client-side_web_APIs/Introduction" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "rest-api",
+      "term": "REST API",
+      "category": "네트워크 & 인프라",
+      "definition": "REST API는 HTTP 프로토콜을 기반으로 하는 웹 API 설계 방식입니다. URL로 자원을 표현하고, HTTP 메서드로 작업을 구분합니다.",
+      "usage": "GET /users (목록 조회), POST /users (생성), PUT /users/1 (수정), DELETE /users/1 (삭제)",
+      "references": [
+        { "title": "REST API 설계 가이드", "url": "https://restfulapi.net" }
+      ],
+      "tags": ["필수", "중급"]
+    },
+    {
+      "id": "http",
+      "term": "HTTP/HTTPS",
+      "category": "네트워크 & 인프라",
+      "definition": "HTTP는 웹에서 데이터를 주고받는 프로토콜입니다. HTTPS는 보안이 강화된 버전으로, 데이터를 암호화하여 전송합니다.",
+      "usage": "브라우저에서 URL을 입력하면 HTTP 요청이 서버로 전송됩니다. 상태 코드(200, 404, 500 등)로 결과를 알립니다.",
+      "references": [
+        { "title": "MDN HTTP", "url": "https://developer.mozilla.org/ko/docs/Web/HTTP" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "server",
+      "term": "서버 (Server)",
+      "category": "네트워크 & 인프라",
+      "definition": "서버는 클라이언트의 요청을 받아 처리하고 응답을 돌려주는 컴퓨터 또는 프로그램입니다.",
+      "usage": "웹사이트를 운영하려면 웹 서버가 필요합니다. Node.js, Python 등으로 서버 프로그램을 작성합니다.",
+      "references": [
+        { "title": "MDN 서버란?", "url": "https://developer.mozilla.org/ko/docs/Learn/Common_questions/What_is_a_web_server" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "client",
+      "term": "클라이언트 (Client)",
+      "category": "네트워크 & 인프라",
+      "definition": "클라이언트는 서버에 서비스를 요청하는 쪽입니다. 웹 브라우저, 모바일 앱 등이 클라이언트가 됩니다.",
+      "usage": "웹 개발에서 '클라이언트 사이드'는 브라우저에서 실행되는 코드를 의미합니다.",
+      "references": [
+        { "title": "클라이언트-서버 모델", "url": "https://developer.mozilla.org/ko/docs/Learn/Server-side/First_steps/Client-Server_overview" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "url",
+      "term": "URL",
+      "category": "네트워크 & 인프라",
+      "definition": "URL은 인터넷에서 자원의 위치를 나타내는 주소입니다. 프로토콜, 도메인, 경로, 쿼리 스트링 등으로 구성됩니다.",
+      "usage": "https://example.com/users?page=1 에서 https는 프로토콜, example.com은 도메인, /users는 경로입니다.",
+      "references": [
+        { "title": "MDN URL이란?", "url": "https://developer.mozilla.org/ko/docs/Learn/Common_questions/What_is_a_URL" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "domain",
+      "term": "도메인 (Domain)",
+      "category": "네트워크 & 인프라",
+      "definition": "도메인은 웹사이트의 주소를 사람이 읽기 쉽게 만든 이름입니다. IP 주소 대신 google.com 같은 이름을 사용합니다.",
+      "usage": "웹사이트를 만들면 도메인을 구매하여 연결합니다. .com, .co.kr, .io 등 다양한 종류가 있습니다.",
+      "references": [
+        { "title": "도메인 이름이란?", "url": "https://developer.mozilla.org/ko/docs/Learn/Common_questions/What_is_a_domain_name" }
+      ],
+      "tags": ["기초"]
+    },
+    {
+      "id": "dns",
+      "term": "DNS",
+      "category": "네트워크 & 인프라",
+      "definition": "DNS는 도메인 이름을 IP 주소로 변환하는 시스템입니다. 인터넷의 전화번호부 같은 역할을 합니다.",
+      "usage": "도메인을 구매하면 DNS 설정에서 A 레코드, CNAME 등을 설정합니다.",
+      "references": [
+        { "title": "DNS란?", "url": "https://www.cloudflare.com/ko-kr/learning/dns/what-is-dns/" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "ip-address",
+      "term": "IP 주소",
+      "category": "네트워크 & 인프라",
+      "definition": "IP 주소는 인터넷에 연결된 기기의 고유한 숫자 주소입니다. 192.168.0.1 형태입니다.",
+      "usage": "localhost는 127.0.0.1로, 자기 자신의 컴퓨터를 가리킵니다.",
+      "references": [
+        { "title": "IP 주소란?", "url": "https://www.cloudflare.com/ko-kr/learning/dns/glossary/what-is-my-ip-address/" }
+      ],
+      "tags": ["기초"]
+    },
+    {
+      "id": "port",
+      "term": "포트 (Port)",
+      "category": "네트워크 & 인프라",
+      "definition": "포트는 컴퓨터에서 실행 중인 프로그램을 구분하는 번호입니다. 0~65535 범위입니다.",
+      "usage": "웹은 기본 80(HTTP), 443(HTTPS), 개발 서버는 3000, 8080 등을 사용합니다.",
+      "references": [
+        { "title": "포트 번호란?", "url": "https://www.cloudflare.com/ko-kr/learning/network-layer/what-is-a-computer-port/" }
+      ],
+      "tags": ["기초"]
+    },
+    {
+      "id": "fetch",
+      "term": "fetch",
+      "category": "네트워크 & 인프라",
+      "definition": "fetch는 JavaScript에서 HTTP 요청을 보내는 내장 API입니다. Promise를 반환하여 비동기로 동작합니다.",
+      "usage": "fetch('https://api.example.com/data').then(res => res.json()).then(data => console.log(data));",
+      "references": [
+        { "title": "MDN fetch", "url": "https://developer.mozilla.org/ko/docs/Web/API/Fetch_API/Using_Fetch" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "axios",
+      "term": "Axios",
+      "category": "네트워크 & 인프라",
+      "definition": "Axios는 HTTP 요청을 보내는 JavaScript 라이브러리입니다. fetch보다 편리한 기능을 제공합니다.",
+      "usage": "npm install axios 로 설치하고, axios.get(url), axios.post(url, data) 형태로 사용합니다.",
+      "references": [
+        { "title": "Axios 공식 문서", "url": "https://axios-http.com/kr/docs/intro" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "cors",
+      "term": "CORS",
+      "category": "네트워크 & 인프라",
+      "definition": "CORS는 다른 출처(도메인)의 자원에 접근하는 것을 제어하는 보안 메커니즘입니다.",
+      "usage": "서버에서 Access-Control-Allow-Origin 헤더를 설정하거나, 개발 시 프록시를 사용합니다.",
+      "references": [
+        { "title": "MDN CORS", "url": "https://developer.mozilla.org/ko/docs/Web/HTTP/CORS" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "websocket",
+      "term": "WebSocket",
+      "category": "네트워크 & 인프라",
+      "definition": "WebSocket은 클라이언트와 서버 간 실시간 양방향 통신을 가능하게 하는 프로토콜입니다.",
+      "usage": "실시간 채팅, 주식 시세, 알림 등에 사용됩니다. Socket.io 라이브러리가 구현을 쉽게 해줍니다.",
+      "references": [
+        { "title": "MDN WebSocket", "url": "https://developer.mozilla.org/ko/docs/Web/API/WebSocket" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "cloud",
+      "term": "클라우드 (Cloud)",
+      "category": "네트워크 & 인프라",
+      "definition": "클라우드는 인터넷을 통해 컴퓨팅 자원을 제공하는 서비스입니다. 물리적 서버 없이 필요한 만큼 빌려 씁니다.",
+      "usage": "AWS, Google Cloud, Azure 같은 클라우드 서비스를 사용합니다.",
+      "references": [
+        { "title": "클라우드 컴퓨팅이란?", "url": "https://aws.amazon.com/ko/what-is-cloud-computing/" }
+      ],
+      "tags": ["기초"]
+    },
+    {
+      "id": "deploy",
+      "term": "배포 (Deploy)",
+      "category": "네트워크 & 인프라",
+      "definition": "배포는 개발한 애플리케이션을 서버에 올려 사용자들이 접근할 수 있게 하는 것입니다.",
+      "usage": "Vercel, Netlify로 프론트엔드를, AWS로 백엔드를 배포합니다.",
+      "references": [
+        { "title": "Vercel 배포 가이드", "url": "https://vercel.com/docs" }
+      ],
+      "tags": ["필수", "중급"]
+    },
+    {
+      "id": "database",
+      "term": "데이터베이스 (Database)",
+      "category": "데이터베이스",
+      "definition": "데이터베이스는 데이터를 체계적으로 저장하고 관리하는 시스템입니다. 엑셀 파일의 고급 버전이라고 생각할 수 있습니다.",
+      "usage": "웹 서비스의 회원 정보, 게시글, 상품 데이터 등을 저장합니다.",
+      "references": [
+        { "title": "데이터베이스 기초", "url": "https://www.oracle.com/kr/database/what-is-database/" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "sql",
+      "term": "SQL",
+      "category": "데이터베이스",
+      "definition": "SQL은 데이터베이스를 조작하는 언어입니다. 데이터 조회(SELECT), 삽입(INSERT), 수정(UPDATE), 삭제(DELETE)를 수행합니다.",
+      "usage": "SELECT * FROM users WHERE age > 20; 처럼 쿼리를 작성합니다.",
+      "references": [
+        { "title": "W3Schools SQL 튜토리얼", "url": "https://www.w3schools.com/sql/" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "crud",
+      "term": "CRUD",
+      "category": "데이터베이스",
+      "definition": "CRUD는 데이터 처리의 기본 4가지 작업입니다. Create(생성), Read(조회), Update(수정), Delete(삭제)의 약자입니다.",
+      "usage": "게시판을 만들면: 글쓰기(Create), 글목록(Read), 글수정(Update), 글삭제(Delete) 기능이 필요합니다.",
+      "references": [
+        { "title": "CRUD란?", "url": "https://developer.mozilla.org/ko/docs/Glossary/CRUD" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "table",
+      "term": "테이블 (Table)",
+      "category": "데이터베이스",
+      "definition": "테이블은 관계형 데이터베이스에서 데이터를 저장하는 구조입니다. 행(row)과 열(column)로 이루어져 있습니다.",
+      "usage": "users 테이블에 id, name, email 컬럼이 있고, 각 행이 한 명의 사용자를 나타냅니다.",
+      "references": [
+        { "title": "SQL 테이블 만들기", "url": "https://www.w3schools.com/sql/sql_create_table.asp" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "query",
+      "term": "쿼리 (Query)",
+      "category": "데이터베이스",
+      "definition": "쿼리는 데이터베이스에 보내는 요청(질문)입니다. SQL 문법으로 작성합니다.",
+      "usage": "SELECT name FROM users WHERE city = '서울'; 은 서울에 사는 사용자의 이름을 조회하는 쿼리입니다.",
+      "references": [
+        { "title": "SQL 쿼리 기초", "url": "https://www.w3schools.com/sql/sql_select.asp" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "schema",
+      "term": "스키마 (Schema)",
+      "category": "데이터베이스",
+      "definition": "스키마는 데이터베이스의 구조를 정의하는 설계도입니다. 테이블, 컬럼, 데이터 타입을 정의합니다.",
+      "usage": "Prisma, TypeORM 같은 ORM에서 스키마 파일을 작성합니다.",
+      "references": [
+        { "title": "데이터베이스 스키마란?", "url": "https://www.ibm.com/kr-ko/topics/database-schema" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "mysql",
+      "term": "MySQL",
+      "category": "데이터베이스",
+      "definition": "MySQL은 가장 널리 사용되는 오픈소스 관계형 데이터베이스입니다. 빠르고 안정적입니다.",
+      "usage": "워드프레스, PHP 애플리케이션에서 기본 DB로 사용됩니다.",
+      "references": [
+        { "title": "MySQL 공식 사이트", "url": "https://www.mysql.com" }
+      ],
+      "tags": ["기초"]
+    },
+    {
+      "id": "postgresql",
+      "term": "PostgreSQL",
+      "category": "데이터베이스",
+      "definition": "PostgreSQL은 고급 기능을 갖춘 오픈소스 관계형 데이터베이스입니다. JSON 지원, 복잡한 쿼리가 뛰어납니다.",
+      "usage": "Supabase, Vercel Postgres 등 클라우드 서비스에서 쉽게 사용할 수 있습니다.",
+      "references": [
+        { "title": "PostgreSQL 공식 사이트", "url": "https://www.postgresql.org" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "mongodb",
+      "term": "MongoDB",
+      "category": "데이터베이스",
+      "definition": "MongoDB는 문서 기반의 NoSQL 데이터베이스입니다. JSON과 비슷한 형태로 데이터를 저장합니다.",
+      "usage": "구조가 자주 바뀌는 데이터에 적합합니다. MongoDB Atlas로 클라우드에서 사용합니다.",
+      "references": [
+        { "title": "MongoDB 공식 사이트", "url": "https://www.mongodb.com" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "nosql",
+      "term": "NoSQL",
+      "category": "데이터베이스",
+      "definition": "NoSQL은 관계형이 아닌 데이터베이스를 총칭합니다. 문서, 키-값, 그래프 등 다양한 형태로 저장합니다.",
+      "usage": "MongoDB(문서), Redis(키-값), Neo4j(그래프) 등이 있습니다.",
+      "references": [
+        { "title": "NoSQL이란?", "url": "https://aws.amazon.com/ko/nosql/" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "orm",
+      "term": "ORM",
+      "category": "데이터베이스",
+      "definition": "ORM은 객체와 데이터베이스 테이블을 연결하는 기술입니다. SQL을 직접 작성하지 않고 코드로 데이터베이스를 조작합니다.",
+      "usage": "Prisma, TypeORM(JavaScript), SQLAlchemy(Python) 등이 있습니다.",
+      "references": [
+        { "title": "Prisma 공식 문서", "url": "https://www.prisma.io/docs" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "primary-key",
+      "term": "기본키 (Primary Key)",
+      "category": "데이터베이스",
+      "definition": "기본키는 테이블에서 각 행을 고유하게 식별하는 컬럼입니다. 중복될 수 없습니다.",
+      "usage": "보통 id 컬럼을 기본키로 사용합니다. 자동 증가(AUTO_INCREMENT) 옵션을 주로 사용합니다.",
+      "references": [
+        { "title": "SQL Primary Key", "url": "https://www.w3schools.com/sql/sql_primarykey.asp" }
+      ],
+      "tags": ["기초"]
+    },
+    {
+      "id": "foreign-key",
+      "term": "외래키 (Foreign Key)",
+      "category": "데이터베이스",
+      "definition": "외래키는 다른 테이블의 기본키를 참조하는 컬럼입니다. 테이블 간의 관계를 정의합니다.",
+      "usage": "주문 테이블의 user_id가 사용자 테이블의 id를 참조합니다.",
+      "references": [
+        { "title": "SQL Foreign Key", "url": "https://www.w3schools.com/sql/sql_foreignkey.asp" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "index-db",
+      "term": "인덱스 (Index)",
+      "category": "데이터베이스",
+      "definition": "인덱스는 데이터베이스 검색 속도를 높이는 자료구조입니다. 책의 색인처럼 빠르게 찾을 수 있게 합니다.",
+      "usage": "자주 검색하는 컬럼에 인덱스를 생성합니다.",
+      "references": [
+        { "title": "SQL Index", "url": "https://www.w3schools.com/sql/sql_create_index.asp" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "supabase",
+      "term": "Supabase",
+      "category": "데이터베이스",
+      "definition": "Supabase는 오픈소스 Firebase 대안으로, PostgreSQL 기반의 Backend-as-a-Service입니다.",
+      "usage": "바이브코딩에서 백엔드를 빠르게 구축할 때 유용합니다. 인증, 스토리지, 실시간 기능을 제공합니다.",
+      "references": [
+        { "title": "Supabase 공식 사이트", "url": "https://supabase.com" }
+      ],
+      "tags": ["바이브코딩"]
+    },
+    {
+      "id": "linux",
+      "term": "Linux",
+      "category": "리눅스 & 서버",
+      "definition": "Linux는 오픈소스 운영체제입니다. 대부분의 웹 서버, 클라우드 서버에서 사용됩니다.",
+      "usage": "서버 관리, 개발 환경 구축에 사용됩니다. ls, cd, mkdir 같은 명령어를 알아야 합니다.",
+      "references": [
+        { "title": "Linux 기초 명령어", "url": "https://www.hostinger.kr/tutorials/linux-commands" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "shell",
+      "term": "셸 (Shell)",
+      "category": "리눅스 & 서버",
+      "definition": "셸은 운영체제와 사용자 사이의 인터페이스입니다. 명령어를 해석하여 운영체제에 전달합니다.",
+      "usage": "터미널에서 명령어를 입력하면 셸이 처리합니다. Bash, Zsh, PowerShell 등이 있습니다.",
+      "references": [
+        { "title": "Bash 기초", "url": "https://www.gnu.org/software/bash/manual/" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "ssh",
+      "term": "SSH",
+      "category": "리눅스 & 서버",
+      "definition": "SSH는 원격 컴퓨터에 안전하게 접속하는 프로토콜입니다. 암호화된 통신으로 서버를 관리합니다.",
+      "usage": "ssh user@server.com 명령어로 서버에 접속합니다.",
+      "references": [
+        { "title": "SSH란?", "url": "https://www.ssh.com/academy/ssh" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "docker",
+      "term": "Docker",
+      "category": "리눅스 & 서버",
+      "definition": "Docker는 애플리케이션을 컨테이너로 패키징하는 플랫폼입니다. 개발 환경을 통째로 담아 어디서든 동일하게 실행할 수 있습니다.",
+      "usage": "Dockerfile로 환경을 정의하고, docker build로 이미지를 만들어 docker run으로 실행합니다.",
+      "references": [
+        { "title": "Docker 공식 문서", "url": "https://docs.docker.com" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "container",
+      "term": "컨테이너 (Container)",
+      "category": "리눅스 & 서버",
+      "definition": "컨테이너는 애플리케이션과 실행 환경을 함께 패키징한 격리된 공간입니다. 가상 머신보다 가볍고 빠릅니다.",
+      "usage": "Docker가 대표적인 컨테이너 기술입니다. Kubernetes로 여러 컨테이너를 관리합니다.",
+      "references": [
+        { "title": "컨테이너란?", "url": "https://www.docker.com/resources/what-container/" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "environment-variable",
+      "term": "환경 변수 (Environment Variable)",
+      "category": "리눅스 & 서버",
+      "definition": "환경 변수는 운영체제나 애플리케이션의 설정값을 저장하는 변수입니다. API 키, 데이터베이스 주소 같은 민감한 값을 관리합니다.",
+      "usage": ".env 파일에 API_KEY=xxx 형태로 저장하고, process.env.API_KEY로 접근합니다. 절대 Git에 커밋하면 안 됩니다.",
+      "references": [
+        { "title": "환경 변수 사용법", "url": "https://www.twilio.com/blog/working-with-environment-variables-in-node-js-html" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "cronjob",
+      "term": "크론잡 (Cron Job)",
+      "category": "리눅스 & 서버",
+      "definition": "크론잡은 정해진 시간에 자동으로 실행되는 예약 작업입니다.",
+      "usage": "매일 자정에 백업, 매시간 데이터 수집 같은 반복 작업을 자동화합니다.",
+      "references": [
+        { "title": "Crontab 가이드", "url": "https://crontab.guru" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "log",
+      "term": "로그 (Log)",
+      "category": "리눅스 & 서버",
+      "definition": "로그는 프로그램의 실행 기록입니다. 에러, 경고, 정보 메시지를 시간순으로 기록합니다.",
+      "usage": "console.log()로 개발 중 확인합니다. 에러 로그, 접근 로그 등을 레벨별로 관리합니다.",
+      "references": [
+        { "title": "로깅 모범 사례", "url": "https://betterstack.com/community/guides/logging/nodejs-logging-best-practices/" }
+      ],
+      "tags": ["기초"]
+    },
+    {
+      "id": "process",
+      "term": "프로세스 (Process)",
+      "category": "리눅스 & 서버",
+      "definition": "프로세스는 실행 중인 프로그램입니다. 각 프로세스는 고유한 ID(PID)를 가집니다.",
+      "usage": "ps 명령어로 프로세스 목록을 확인하고, kill로 종료합니다.",
+      "references": [
+        { "title": "Linux 프로세스 관리", "url": "https://www.geeksforgeeks.org/processes-in-linuxunix/" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "pm2",
+      "term": "PM2",
+      "category": "리눅스 & 서버",
+      "definition": "PM2는 Node.js 애플리케이션을 위한 프로세스 관리자입니다. 앱이 죽으면 자동 재시작합니다.",
+      "usage": "pm2 start app.js로 실행하고, pm2 list로 상태 확인합니다.",
+      "references": [
+        { "title": "PM2 공식 문서", "url": "https://pm2.keymetrics.io/docs/usage/quick-start/" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "ubuntu",
+      "term": "Ubuntu",
+      "category": "리눅스 & 서버",
+      "definition": "Ubuntu는 가장 인기 있는 Linux 배포판입니다. 사용하기 쉽고 커뮤니티가 큽니다.",
+      "usage": "AWS EC2에서 Ubuntu 서버를 많이 사용합니다. apt로 소프트웨어를 설치합니다.",
+      "references": [
+        { "title": "Ubuntu 공식 사이트", "url": "https://ubuntu.com" }
+      ],
+      "tags": ["기초"]
+    },
+    {
+      "id": "wsl",
+      "term": "WSL",
+      "category": "리눅스 & 서버",
+      "definition": "WSL은 Windows에서 Linux를 실행할 수 있게 해주는 기능입니다.",
+      "usage": "Windows 개발자가 Linux 환경이 필요할 때 사용합니다. wsl --install로 설치합니다.",
+      "references": [
+        { "title": "WSL 설치 가이드", "url": "https://learn.microsoft.com/ko-kr/windows/wsl/install" }
+      ],
+      "tags": ["기초"]
+    },
+    {
+      "id": "nginx",
+      "term": "Nginx",
+      "category": "웹 서버",
+      "definition": "Nginx는 고성능 웹 서버 소프트웨어입니다. 정적 파일 제공, 리버스 프록시, 로드 밸런싱에 사용됩니다.",
+      "usage": "프론트엔드 빌드 파일을 서빙하거나, 백엔드 서버 앞에서 요청을 분배합니다.",
+      "references": [
+        { "title": "Nginx 공식 문서", "url": "https://nginx.org/en/docs/" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "apache",
+      "term": "Apache",
+      "category": "웹 서버",
+      "definition": "Apache는 오랜 역사를 가진 오픈소스 웹 서버입니다. 모듈 시스템으로 기능을 확장할 수 있습니다.",
+      "usage": "PHP 애플리케이션, 워드프레스와 함께 많이 사용됩니다.",
+      "references": [
+        { "title": "Apache 공식 사이트", "url": "https://httpd.apache.org" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "reverse-proxy",
+      "term": "리버스 프록시 (Reverse Proxy)",
+      "category": "웹 서버",
+      "definition": "리버스 프록시는 클라이언트 요청을 받아 뒤에 있는 서버로 전달하는 중간 서버입니다.",
+      "usage": "Nginx를 리버스 프록시로 설정하여 Node.js 서버 앞에 둡니다.",
+      "references": [
+        { "title": "리버스 프록시란?", "url": "https://www.cloudflare.com/ko-kr/learning/cdn/glossary/reverse-proxy/" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "load-balancer",
+      "term": "로드 밸런서 (Load Balancer)",
+      "category": "웹 서버",
+      "definition": "로드 밸런서는 들어오는 트래픽을 여러 서버에 분산시킵니다. 서버 부하를 균등하게 나눕니다.",
+      "usage": "AWS ELB, Nginx 등을 사용합니다. 한 서버가 죽어도 다른 서버가 요청을 처리합니다.",
+      "references": [
+        { "title": "로드 밸런싱이란?", "url": "https://aws.amazon.com/ko/what-is/load-balancing/" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "ssl-tls",
+      "term": "SSL/TLS",
+      "category": "웹 서버",
+      "definition": "SSL/TLS는 인터넷 통신을 암호화하는 보안 프로토콜입니다. HTTPS의 'S'가 이것입니다.",
+      "usage": "Let's Encrypt에서 무료 인증서를 발급받아 적용합니다.",
+      "references": [
+        { "title": "Let's Encrypt", "url": "https://letsencrypt.org" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "cdn",
+      "term": "CDN",
+      "category": "웹 서버",
+      "definition": "CDN은 전 세계에 분산된 서버 네트워크입니다. 사용자와 가까운 서버에서 콘텐츠를 제공하여 로딩 속도를 높입니다.",
+      "usage": "Cloudflare, AWS CloudFront가 대표적입니다. 정적 자원을 CDN에 올립니다.",
+      "references": [
+        { "title": "CDN이란?", "url": "https://www.cloudflare.com/ko-kr/learning/cdn/what-is-a-cdn/" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "vercel",
+      "term": "Vercel",
+      "category": "웹 서버",
+      "definition": "Vercel은 프론트엔드 배포 플랫폼입니다. Next.js를 만든 회사로, Git 연동으로 자동 배포, 글로벌 CDN을 제공합니다.",
+      "usage": "GitHub 저장소를 연결하면 push할 때마다 자동 배포됩니다. 무료로 시작할 수 있습니다.",
+      "references": [
+        { "title": "Vercel 공식 사이트", "url": "https://vercel.com" }
+      ],
+      "tags": ["필수", "바이브코딩"]
+    },
+    {
+      "id": "netlify",
+      "term": "Netlify",
+      "category": "웹 서버",
+      "definition": "Netlify는 정적 사이트와 서버리스 함수를 호스팅하는 플랫폼입니다. Vercel과 유사한 서비스입니다.",
+      "usage": "React, Vue 같은 정적 사이트를 배포할 때 사용합니다.",
+      "references": [
+        { "title": "Netlify 공식 사이트", "url": "https://www.netlify.com" }
+      ],
+      "tags": ["바이브코딩"]
+    },
+    {
+      "id": "serverless",
+      "term": "서버리스 (Serverless)",
+      "category": "웹 서버",
+      "definition": "서버리스는 서버 관리 없이 코드를 실행하는 클라우드 모델입니다. 사용한 만큼만 비용을 지불합니다.",
+      "usage": "AWS Lambda, Vercel Functions, Cloudflare Workers 등이 있습니다.",
+      "references": [
+        { "title": "서버리스란?", "url": "https://aws.amazon.com/ko/serverless/" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "static-site",
+      "term": "정적 사이트 (Static Site)",
+      "category": "웹 서버",
+      "definition": "정적 사이트는 미리 만들어진 HTML 파일을 그대로 제공하는 웹사이트입니다. 빠르고 안전합니다.",
+      "usage": "Next.js의 정적 생성(SSG), Gatsby 등으로 만듭니다. GitHub Pages에서 무료로 호스팅합니다.",
+      "references": [
+        { "title": "정적 사이트 생성기", "url": "https://jamstack.org/generators/" }
+      ],
+      "tags": ["기초"]
+    },
+    {
+      "id": "authentication",
+      "term": "인증 (Authentication)",
+      "category": "보안 & 인증",
+      "definition": "인증은 사용자가 누구인지 확인하는 과정입니다. 로그인이 대표적인 인증입니다.",
+      "usage": "NextAuth, Firebase Auth 같은 서비스를 사용합니다. JWT, 세션 등의 방식으로 로그인 상태를 유지합니다.",
+      "references": [
+        { "title": "웹 인증 기초", "url": "https://developer.mozilla.org/ko/docs/Web/HTTP/Authentication" }
+      ],
+      "tags": ["필수", "중급"]
+    },
+    {
+      "id": "authorization",
+      "term": "인가 (Authorization)",
+      "category": "보안 & 인증",
+      "definition": "인가는 인증된 사용자가 특정 자원에 접근할 권한이 있는지 확인하는 과정입니다.",
+      "usage": "관리자/일반 사용자 권한 구분, 본인 글만 수정 가능 등의 기능에 사용됩니다.",
+      "references": [
+        { "title": "인증 vs 인가", "url": "https://auth0.com/docs/get-started/identity-fundamentals/authentication-and-authorization" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "jwt",
+      "term": "JWT",
+      "category": "보안 & 인증",
+      "definition": "JWT는 사용자 정보를 안전하게 전달하는 토큰 형식입니다. 로그인 후 서버가 JWT를 발급합니다.",
+      "usage": "클라이언트가 요청 헤더에 JWT를 포함하여 보냅니다. 만료 시간을 설정하여 보안을 강화합니다.",
+      "references": [
+        { "title": "JWT 소개", "url": "https://jwt.io/introduction" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "oauth",
+      "term": "OAuth",
+      "category": "보안 & 인증",
+      "definition": "OAuth는 제3자 서비스를 통해 인증하는 표준 프로토콜입니다. 'Google로 로그인' 같은 소셜 로그인이 OAuth입니다.",
+      "usage": "NextAuth, Passport.js 같은 라이브러리를 사용합니다.",
+      "references": [
+        { "title": "OAuth 2.0 설명", "url": "https://oauth.net/2/" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "hash",
+      "term": "해시 (Hash)",
+      "category": "보안 & 인증",
+      "definition": "해시는 데이터를 고정 길이의 문자열로 변환하는 단방향 함수입니다. 비밀번호 저장에 사용됩니다.",
+      "usage": "비밀번호를 해시하여 데이터베이스에 저장합니다. bcrypt, argon2 같은 알고리즘을 사용합니다.",
+      "references": [
+        { "title": "비밀번호 해싱", "url": "https://auth0.com/blog/hashing-passwords-one-way-road-to-security/" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "encryption",
+      "term": "암호화 (Encryption)",
+      "category": "보안 & 인증",
+      "definition": "암호화는 데이터를 읽을 수 없는 형태로 변환하는 것입니다. 해시와 달리 키를 사용해 복호화할 수 있습니다.",
+      "usage": "HTTPS 통신이 암호화를 사용합니다. 대칭키(AES), 비대칭키(RSA) 방식이 있습니다.",
+      "references": [
+        { "title": "암호화 기초", "url": "https://www.cloudflare.com/ko-kr/learning/ssl/what-is-encryption/" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "api-key",
+      "term": "API 키 (API Key)",
+      "category": "보안 & 인증",
+      "definition": "API 키는 API 사용자를 식별하고 인증하는 문자열입니다. 사용량 추적, 접근 제어에 사용됩니다.",
+      "usage": "환경 변수에 저장하고, 요청 헤더로 전송합니다. 절대 GitHub에 올리면 안 됩니다.",
+      "references": [
+        { "title": "API 키 보안", "url": "https://cloud.google.com/docs/authentication/api-keys" }
+      ],
+      "tags": ["필수", "기초"]
+    },
+    {
+      "id": "xss-csrf",
+      "term": "XSS/CSRF",
+      "category": "보안 & 인증",
+      "definition": "XSS는 악성 스크립트 삽입 공격, CSRF는 사용자를 속여 원치 않는 요청을 보내게 하는 공격입니다.",
+      "usage": "사용자 입력을 이스케이프하고, CSRF 토큰을 사용합니다.",
+      "references": [
+        { "title": "OWASP 보안 가이드", "url": "https://owasp.org/www-community/" }
+      ],
+      "tags": ["고급"]
+    },
+    {
+      "id": "caching",
+      "term": "캐싱 (Caching)",
+      "category": "성능 & 최적화",
+      "definition": "캐싱은 자주 사용하는 데이터를 임시로 저장하여 빠르게 접근하는 기술입니다.",
+      "usage": "브라우저 캐시, CDN 캐시, Redis 같은 인메모리 캐시를 사용합니다.",
+      "references": [
+        { "title": "웹 캐싱", "url": "https://developer.mozilla.org/ko/docs/Web/HTTP/Caching" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "lazy-loading",
+      "term": "레이지 로딩 (Lazy Loading)",
+      "category": "성능 & 최적화",
+      "definition": "레이지 로딩은 필요한 시점에 자원을 불러오는 기술입니다. 초기 로딩 시간을 줄입니다.",
+      "usage": "이미지가 화면에 보일 때 로드하거나, 라우트별로 코드를 분할합니다.",
+      "references": [
+        { "title": "레이지 로딩 가이드", "url": "https://developer.mozilla.org/ko/docs/Web/Performance/Lazy_loading" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "minification",
+      "term": "압축/최소화 (Minification)",
+      "category": "성능 & 최적화",
+      "definition": "최소화는 코드에서 불필요한 공백, 주석을 제거하여 파일 크기를 줄이는 것입니다.",
+      "usage": "빌드 도구가 프로덕션 빌드 시 자동으로 처리합니다.",
+      "references": [
+        { "title": "코드 최소화", "url": "https://developer.mozilla.org/ko/docs/Glossary/Minification" }
+      ],
+      "tags": ["기초"]
+    },
+    {
+      "id": "bundling",
+      "term": "번들링 (Bundling)",
+      "category": "성능 & 최적화",
+      "definition": "번들링은 여러 개의 파일을 하나로 합치는 것입니다. HTTP 요청 수를 줄여 로딩 속도를 개선합니다.",
+      "usage": "webpack, Vite, Rollup 같은 번들러를 사용합니다. npm run build 명령어로 번들링합니다.",
+      "references": [
+        { "title": "Vite 공식 문서", "url": "https://vitejs.dev" }
+      ],
+      "tags": ["기초"]
+    },
+    {
+      "id": "seo",
+      "term": "SEO",
+      "category": "성능 & 최적화",
+      "definition": "SEO는 검색 엔진에서 웹사이트가 잘 노출되도록 최적화하는 것입니다.",
+      "usage": "title, description 메타 태그를 설정하고, 시맨틱 HTML을 사용합니다.",
+      "references": [
+        { "title": "Google SEO 가이드", "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=ko" }
+      ],
+      "tags": ["기초"]
+    },
+    {
+      "id": "lighthouse",
+      "term": "Lighthouse",
+      "category": "성능 & 최적화",
+      "definition": "Lighthouse는 Google이 만든 웹 성능 측정 도구입니다. 성능, 접근성, SEO를 점수로 평가합니다.",
+      "usage": "Chrome 개발자 도구의 Lighthouse 탭에서 실행합니다. 90점 이상을 목표로 최적화합니다.",
+      "references": [
+        { "title": "Lighthouse 문서", "url": "https://developer.chrome.com/docs/lighthouse/overview/" }
+      ],
+      "tags": ["기초"]
+    },
+    {
+      "id": "web-vitals",
+      "term": "Core Web Vitals",
+      "category": "성능 & 최적화",
+      "definition": "Core Web Vitals는 Google이 정의한 웹 사용자 경험의 핵심 지표입니다. LCP, FID, CLS로 구성됩니다.",
+      "usage": "Lighthouse, PageSpeed Insights에서 측정합니다.",
+      "references": [
+        { "title": "Core Web Vitals", "url": "https://web.dev/vitals/" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "aws-ec2",
+      "term": "AWS EC2",
+      "category": "AWS",
+      "definition": "EC2는 AWS의 가상 서버 서비스입니다. 필요한 사양의 서버를 몇 분 안에 생성할 수 있습니다.",
+      "usage": "웹 서버, API 서버 등을 운영합니다. Ubuntu를 설치하고 SSH로 접속하여 관리합니다.",
+      "references": [
+        { "title": "EC2 시작 가이드", "url": "https://aws.amazon.com/ko/ec2/getting-started/" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "aws-s3",
+      "term": "AWS S3",
+      "category": "AWS",
+      "definition": "S3는 AWS의 객체 스토리지 서비스입니다. 파일을 무제한으로 저장하고 웹에서 접근할 수 있습니다.",
+      "usage": "사용자 업로드 파일, 정적 웹사이트 호스팅, 로그 저장 등에 사용합니다.",
+      "references": [
+        { "title": "S3 시작 가이드", "url": "https://aws.amazon.com/ko/s3/getting-started/" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "aws-lambda",
+      "term": "AWS Lambda",
+      "category": "AWS",
+      "definition": "Lambda는 AWS의 서버리스 컴퓨팅 서비스입니다. 서버 없이 코드를 실행하고, 실행 시간만큼만 비용을 지불합니다.",
+      "usage": "API 백엔드, 파일 처리, 스케줄 작업 등에 사용합니다.",
+      "references": [
+        { "title": "Lambda 시작 가이드", "url": "https://aws.amazon.com/ko/lambda/getting-started/" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "aws-rds",
+      "term": "AWS RDS",
+      "category": "AWS",
+      "definition": "RDS는 AWS의 관리형 데이터베이스 서비스입니다. MySQL, PostgreSQL 등을 쉽게 설정할 수 있습니다.",
+      "usage": "데이터베이스 직접 관리 대신 RDS를 사용하면 운영 부담이 줄어듭니다.",
+      "references": [
+        { "title": "RDS 시작 가이드", "url": "https://aws.amazon.com/ko/rds/getting-started/" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "aws-cloudfront",
+      "term": "AWS CloudFront",
+      "category": "AWS",
+      "definition": "CloudFront는 AWS의 CDN 서비스입니다. 전 세계 엣지 로케이션에서 콘텐츠를 제공합니다.",
+      "usage": "정적 파일을 CloudFront로 배포하면 사용자와 가까운 서버에서 제공됩니다.",
+      "references": [
+        { "title": "CloudFront 시작 가이드", "url": "https://aws.amazon.com/ko/cloudfront/getting-started/" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "aws-amplify",
+      "term": "AWS Amplify",
+      "category": "AWS",
+      "definition": "Amplify는 풀스택 웹/모바일 앱 개발을 위한 AWS 서비스입니다. 인증, API, 스토리지, 호스팅을 제공합니다.",
+      "usage": "바이브코딩으로 AWS를 시작하기 좋은 서비스입니다. React, Next.js 앱을 쉽게 배포합니다.",
+      "references": [
+        { "title": "Amplify 공식 문서", "url": "https://docs.amplify.aws" }
+      ],
+      "tags": ["바이브코딩"]
+    },
+    {
+      "id": "webrtc",
+      "term": "WebRTC",
+      "category": "미디어 & 특수 기술",
+      "definition": "WebRTC는 브라우저 간 실시간 통신을 가능하게 하는 기술입니다. 영상 통화, 파일 공유 등을 구현할 수 있습니다.",
+      "usage": "화상 회의, P2P 파일 전송, 라이브 스트리밍에 사용됩니다.",
+      "references": [
+        { "title": "WebRTC 공식 사이트", "url": "https://webrtc.org" }
+      ],
+      "tags": ["고급"]
+    },
+    {
+      "id": "canvas",
+      "term": "Canvas",
+      "category": "미디어 & 특수 기술",
+      "definition": "Canvas는 HTML5에서 그래픽을 그리는 요소입니다. JavaScript로 도형, 이미지, 애니메이션을 렌더링합니다.",
+      "usage": "차트, 이미지 편집기, 2D 게임 개발에 사용됩니다.",
+      "references": [
+        { "title": "MDN Canvas 튜토리얼", "url": "https://developer.mozilla.org/ko/docs/Web/API/Canvas_API/Tutorial" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "svg",
+      "term": "SVG",
+      "category": "미디어 & 특수 기술",
+      "definition": "SVG는 벡터 기반 그래픽 형식입니다. 확대해도 깨지지 않으며, CSS와 JavaScript로 조작할 수 있습니다.",
+      "usage": "로고, 아이콘, 인포그래픽에 사용됩니다. <svg> 태그로 HTML에 삽입합니다.",
+      "references": [
+        { "title": "MDN SVG", "url": "https://developer.mozilla.org/ko/docs/Web/SVG" }
+      ],
+      "tags": ["기초"]
+    },
+    {
+      "id": "pwa",
+      "term": "PWA",
+      "category": "미디어 & 특수 기술",
+      "definition": "PWA는 웹 기술로 만든 앱 같은 웹사이트입니다. 오프라인 작동, 푸시 알림, 홈 화면 설치가 가능합니다.",
+      "usage": "Service Worker를 등록하고 manifest.json을 설정합니다.",
+      "references": [
+        { "title": "PWA 소개", "url": "https://web.dev/progressive-web-apps/" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "web-worker",
+      "term": "Web Worker",
+      "category": "미디어 & 특수 기술",
+      "definition": "Web Worker는 메인 스레드와 별개로 백그라운드에서 JavaScript를 실행하는 기술입니다.",
+      "usage": "이미지 처리, 대용량 데이터 계산 등 CPU 집약적 작업에 사용합니다.",
+      "references": [
+        { "title": "MDN Web Worker", "url": "https://developer.mozilla.org/ko/docs/Web/API/Web_Workers_API/Using_web_workers" }
+      ],
+      "tags": ["고급"]
+    },
+    {
+      "id": "flutter",
+      "term": "Flutter",
+      "category": "플랫폼 & 통합",
+      "definition": "Flutter는 Google이 만든 크로스플랫폼 UI 프레임워크입니다. 하나의 코드베이스로 iOS, Android, 웹, 데스크톱 앱을 만듭니다.",
+      "usage": "모바일 앱을 빠르게 개발하고 싶을 때 사용합니다. Dart 언어를 사용합니다.",
+      "references": [
+        { "title": "Flutter 공식 사이트", "url": "https://flutter.dev" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "react-native",
+      "term": "React Native",
+      "category": "플랫폼 & 통합",
+      "definition": "React Native는 React로 네이티브 모바일 앱을 만드는 프레임워크입니다. JavaScript로 iOS와 Android 앱을 동시에 개발합니다.",
+      "usage": "React를 알면 쉽게 시작할 수 있습니다. Expo를 사용하면 빠르게 개발할 수 있습니다.",
+      "references": [
+        { "title": "React Native 공식 문서", "url": "https://reactnative.dev" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "electron",
+      "term": "Electron",
+      "category": "플랫폼 & 통합",
+      "definition": "Electron은 웹 기술로 데스크톱 앱을 만드는 프레임워크입니다. VS Code, Slack이 Electron으로 만들어졌습니다.",
+      "usage": "웹 개발자가 데스크톱 앱을 만들 때 사용합니다.",
+      "references": [
+        { "title": "Electron 공식 문서", "url": "https://www.electronjs.org/docs/latest/" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "graphql",
+      "term": "GraphQL",
+      "category": "플랫폼 & 통합",
+      "definition": "GraphQL은 API 쿼리 언어입니다. REST와 달리 클라이언트가 필요한 데이터만 정확히 요청할 수 있습니다.",
+      "usage": "복잡한 데이터 요구사항이 있을 때 유용합니다. Apollo Client와 함께 사용합니다.",
+      "references": [
+        { "title": "GraphQL 공식 사이트", "url": "https://graphql.org" }
+      ],
+      "tags": ["중급"]
+    },
+    {
+      "id": "ci-cd",
+      "term": "CI/CD",
+      "category": "플랫폼 & 통합",
+      "definition": "CI는 코드 변경을 자동으로 빌드/테스트하는 것, CD는 자동으로 배포하는 것입니다. 개발 생산성을 높여줍니다.",
+      "usage": "GitHub Actions, GitLab CI 등을 사용합니다. main에 머지되면 자동 배포됩니다.",
+      "references": [
+        { "title": "GitHub Actions 문서", "url": "https://docs.github.com/ko/actions" }
+      ],
+      "tags": ["중급"]
+    }
+  ]
+}

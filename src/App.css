@@ -1,0 +1,497 @@
+/* Base Layout Enhancements */
+.app-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  min-height: 100vh;
+}
+
+/* Premium Header Styling */
+.premium-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4rem;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.logo-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(99, 102, 241, 0.1);
+}
+
+.logo-text h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.logo-text p {
+  font-size: 1rem;
+  opacity: 0.6;
+  margin-top: 0.2rem;
+}
+
+/* Theme Selector */
+.theme-selector {
+  display: flex;
+  gap: 0.8rem;
+  padding-top: 0.5rem;
+}
+
+.theme-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.theme-circle.active {
+  border-color: #fff;
+  transform: scale(1.2);
+}
+
+/* Search Bar Update */
+.premium-search {
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2.5rem;
+}
+
+.premium-search input {
+  width: 100%;
+  border: none;
+  background: none;
+  font-size: 1.1rem;
+  color: #fff;
+  outline: none;
+}
+
+/* Category Grid - CSS Grid Modern */
+.category-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+  animation: slideIn 0.3s ease-in-out;
+}
+
+/* Term List - CSS Grid Modern */
+.term-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  animation: fadeIn 0.4s ease-out;
+}
+
+
+.premium-tag {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.6rem 1.2rem;
+  border-radius: 99px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.premium-tag.active {
+  background: #6366f1;
+  color: #fff;
+  border-color: #6366f1;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.cat-count {
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+/* Card Improvements - Rounded Soft Style */
+.premium-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.premium-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.en-sub {
+  font-size: 0.9rem;
+  opacity: 0.4;
+  margin-top: 0.2rem;
+  display: block;
+}
+
+.difficulty-badge {
+  background: rgba(99, 102, 241, 0.15);
+  color: #a5b4fc;
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Theme Variations - Managed */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 1. Dark Theme */
+body.theme-dark {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+.theme-dark .logo-text h1,
+.theme-dark .premium-search input {
+  color: #ffffff;
+}
+
+.theme-dark .premium-tag {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* 2. Slate Theme */
+body.theme-slate {
+  background-color: #334155;
+  color: #f1f5f9;
+}
+
+.theme-slate .logo-text h1,
+.theme-slate .premium-search input {
+  color: #ffffff;
+}
+
+/* 3. Purple Theme */
+body.theme-purple {
+  background: linear-gradient(135deg, #4338ca, #7c3aed);
+  background-attachment: fixed;
+  color: #ffffff;
+}
+
+.theme-purple .premium-tag {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.theme-purple .premium-tag.active {
+  background: #ffffff;
+  color: #6366f1;
+}
+
+/* 4. Light Theme (Optimized) */
+body.theme-light {
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+.theme-light .logo-text h1 {
+  color: #0f172a;
+}
+
+.theme-light .logo-text p {
+  color: #475569;
+  opacity: 1;
+}
+
+.theme-light .premium-search {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+}
+
+.theme-light .premium-search input {
+  color: #1e293b;
+}
+
+.theme-light .premium-tag {
+  background: #ffffff;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+}
+
+.theme-light .premium-tag.active {
+  background: #6366f1;
+  color: #ffffff;
+  border-color: #6366f1;
+}
+
+.theme-light .cat-count {
+  color: #64748b;
+  opacity: 0.8;
+}
+
+.theme-light .premium-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+}
+
+.theme-light .en-sub {
+  color: #64748b;
+  opacity: 1;
+}
+
+.theme-light .term-description {
+  color: #334155;
+}
+
+.theme-light .glass-card {
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+/* Wiki-style Detail Page Optimization */
+.wiki-style .premium-detail {
+  padding: 2.5rem;
+  border-radius: 12px;
+  background: rgba(30, 41, 59, 0.4);
+  /* 이미지와 유사한 차분한 배경 */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.wiki-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1.5rem;
+}
+
+.wiki-category {
+  font-size: 0.85rem;
+  opacity: 0.5;
+  color: #94a3b8;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.wiki-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 0.8rem;
+}
+
+.wiki-back {
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0;
+}
+
+.wiki-back:hover {
+  color: #6366f1;
+}
+
+.wiki-section {
+  margin-bottom: 2.5rem;
+}
+
+.section-header {
+  display: inline-block;
+  background: rgba(51, 65, 85, 0.8);
+  /* 이미지 속 헤더 박스 느낌 */
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1.2rem;
+}
+
+.section-header h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  text-decoration: underline;
+  /* 이미지의 강조 포인트 */
+  text-underline-offset: 4px;
+}
+
+.section-body {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #cbd5e1;
+  padding-left: 0.5rem;
+}
+
+.wiki-code {
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 1rem;
+}
+
+.wiki-list {
+  list-style: none;
+  padding: 0;
+}
+
+.wiki-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.6rem;
+  color: #6366f1;
+  /* 리스트 아이템 강조 */
+  font-weight: 500;
+}
+
+.wiki-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #94a3b8;
+}
+
+/* Light mode support for Wiki Style */
+.theme-light .wiki-style .premium-detail {
+  background: #ffffff;
+  border-color: #e2e8f0;
+}
+
+.theme-light .section-header {
+  background: #f1f5f9;
+}
+
+.theme-light .section-header h4 {
+  color: #1e293b;
+}
+
+.theme-light .section-body {
+  color: #475569;
+}
+
+/* 참고 링크 스타일 */
+.ref-link {
+  color: #6366f1;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.2s ease;
+}
+
+.ref-link:hover {
+  color: #a855f7;
+  text-decoration: underline;
+}
+
+/* 태그 섹션 */
+.tags-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 검색창 아이콘 */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* Detail Improvements */
+.premium-detail {
+  padding: 3rem;
+  border-radius: 32px;
+}
+
+.detail-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.detail-en {
+  font-size: 1.2rem;
+  opacity: 0.5;
+}
+
+.detail-section {
+  margin-top: 2.5rem;
+}
+
+.detail-section h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #6366f1;
+}
+
+.mini-tag {
+  background: rgba(99, 102, 241, 0.1);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* ========================================
+   Mobile First Responsive Design
+   ======================================== */
+
+/* Base: Mobile (< 640px) */
+@media (max-width: 639px) {
+  .app-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .premium-header {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .logo-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .term-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .wiki-title {
+    font-size: 1.6rem;
+  }
+}
+
+/* Tablet (640px - 1023px) */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .app-container {
+    max-width: 720px;
+  }
+
+  .term-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop (1024px+) */
+@media (min-width: 1024px) {
+  .app-container {
+    max-width: 960px;
+    padding: 4rem 2rem;
+  }
+
+  .term-list {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
